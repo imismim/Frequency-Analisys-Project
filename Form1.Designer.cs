@@ -340,7 +340,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(844, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(842, 30);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -391,7 +391,7 @@
             this.ControlPanel.Controls.Add(this.DoItButton);
             this.ControlPanel.Location = new System.Drawing.Point(0, 103);
             this.ControlPanel.Name = "ControlPanel";
-            this.ControlPanel.Size = new System.Drawing.Size(435, 427);
+            this.ControlPanel.Size = new System.Drawing.Size(435, 360);
             this.ControlPanel.TabIndex = 8;
             this.ControlPanel.Visible = false;
             // 
@@ -402,7 +402,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(844, 475);
+            this.ClientSize = new System.Drawing.Size(842, 475);
             this.Controls.Add(this.ShowFrequenchyTableTextBox);
             this.Controls.Add(this.ShowPathTextBox);
             this.Controls.Add(this.ControlPanel);

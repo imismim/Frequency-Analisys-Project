@@ -152,7 +152,6 @@ namespace WinFormsApp1
             }
             catch (Exception)
             {
-
                 if (InterfaceLangUa.Checked)
                 {
                     MessageBox.Show("Ви щось робите не так!", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning,
