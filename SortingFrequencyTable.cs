@@ -15,7 +15,7 @@ namespace WinFormsApp1
                 this.table = this.table.OrderByDescending(x => x.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
             else
                 this.table = this.table.OrderBy(x => x.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
-            this.ShowFrequenchyTableTextBox.Text = Frequency.BuildTable(table);
+            this.DisplayTableUaTextBox.Text = Frequency.BuildTable(table);
         }
 
         private void ByCalculatetPercentRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -25,7 +25,7 @@ namespace WinFormsApp1
             else
                 this.table = this.table.OrderBy(x => x.CalcPercent).ToList();
 
-            this.ShowFrequenchyTableTextBox.Text = Frequency.BuildTable(table);
+            this.DisplayTableUaTextBox.Text = Frequency.BuildTable(table);
 
         }
 
@@ -36,7 +36,7 @@ namespace WinFormsApp1
                 this.table = this.table.OrderByDescending(x => x.StandartPercent).ToList();
             else
                 this.table = this.table.OrderBy(x => x.StandartPercent).ToList();
-            this.ShowFrequenchyTableTextBox.Text = Frequency.BuildTable(table);
+            this.DisplayTableUaTextBox.Text = Frequency.BuildTable(table);
         }
 
         private void SortByGrowthRadioButton_CheckedChanged(object sender, EventArgs e)

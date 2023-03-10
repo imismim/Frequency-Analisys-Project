@@ -28,17 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DoItButton = new System.Windows.Forms.Button();
-            this.ShowFrequenchyTableTextBox = new System.Windows.Forms.TextBox();
-            this.ChooseFileButton = new System.Windows.Forms.Button();
-            this.ShowPathTextBox = new System.Windows.Forms.TextBox();
-            this.SelectLangFileLabel = new System.Windows.Forms.Label();
-            this.isUkFile = new System.Windows.Forms.RadioButton();
-            this.LangFilePanel = new System.Windows.Forms.Panel();
-            this.isEnFile = new System.Windows.Forms.RadioButton();
+            this.DisplayTableUaTextBox = new System.Windows.Forms.TextBox();
+            this.SelectFileUaButton = new System.Windows.Forms.Button();
             this.SortingPanel = new System.Windows.Forms.Panel();
-            this.CompareResultLabel = new System.Windows.Forms.Label();
-            this.CompareTablesButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.SortingRuTableRadioButton = new System.Windows.Forms.RadioButton();
+            this.SortingUaTableRadioButton = new System.Windows.Forms.RadioButton();
+            this.SortingEnTableRadioButton = new System.Windows.Forms.RadioButton();
             this.ByStandartPercentRadioButton = new System.Windows.Forms.RadioButton();
             this.SortingByPanel = new System.Windows.Forms.Panel();
             this.SortInDescendingOrderRadioButton = new System.Windows.Forms.RadioButton();
@@ -47,163 +43,115 @@
             this.SelectSortingLabel = new System.Windows.Forms.Label();
             this.ByAlphabetRadioButton = new System.Windows.Forms.RadioButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.ReturnToChangeLangButton = new System.Windows.Forms.Button();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.LanguageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.InterfaceLangUa = new System.Windows.Forms.ToolStripMenuItem();
-            this.InterfaceLangEn = new System.Windows.Forms.ToolStripMenuItem();
-            this.importTable = new System.Windows.Forms.ToolStripMenuItem();
-            this.SaveTable = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.ControlPanel = new System.Windows.Forms.Panel();
-            this.LangFilePanel.SuspendLayout();
+            this.SelectFileRuButton = new System.Windows.Forms.Button();
+            this.SaveTableUaButton = new System.Windows.Forms.Button();
+            this.CompareTablesUaButton = new System.Windows.Forms.Button();
+            this.ImportTableUaButton = new System.Windows.Forms.Button();
+            this.SaveTableRuButton = new System.Windows.Forms.Button();
+            this.ImprotTableRuButoon = new System.Windows.Forms.Button();
+            this.CompareTablesRuButton = new System.Windows.Forms.Button();
+            this.DisplayTableRuTextBox = new System.Windows.Forms.TextBox();
+            this.DisplayTableEnTextBox = new System.Windows.Forms.TextBox();
+            this.CompareTablesEnButton = new System.Windows.Forms.Button();
+            this.ImportTableEnButton = new System.Windows.Forms.Button();
+            this.SaveTableEnButton = new System.Windows.Forms.Button();
+            this.SelectFileEnButton = new System.Windows.Forms.Button();
             this.SortingPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SortingByPanel.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.ControlPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // DoItButton
+            // DisplayTableUaTextBox
             // 
-            this.DoItButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.DoItButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DoItButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.DoItButton.Location = new System.Drawing.Point(12, 0);
-            this.DoItButton.Name = "DoItButton";
-            this.DoItButton.Size = new System.Drawing.Size(417, 60);
-            this.DoItButton.TabIndex = 0;
-            this.DoItButton.Text = "ENTER";
-            this.DoItButton.UseVisualStyleBackColor = false;
-            this.DoItButton.Click += new System.EventHandler(this.DoItButton_Click);
+            this.DisplayTableUaTextBox.Location = new System.Drawing.Point(15, 137);
+            this.DisplayTableUaTextBox.Multiline = true;
+            this.DisplayTableUaTextBox.Name = "DisplayTableUaTextBox";
+            this.DisplayTableUaTextBox.ReadOnly = true;
+            this.DisplayTableUaTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.DisplayTableUaTextBox.Size = new System.Drawing.Size(387, 320);
+            this.DisplayTableUaTextBox.TabIndex = 1;
+            this.DisplayTableUaTextBox.WordWrap = false;
             // 
-            // ShowFrequenchyTableTextBox
+            // SelectFileUaButton
             // 
-            this.ShowFrequenchyTableTextBox.Location = new System.Drawing.Point(441, 103);
-            this.ShowFrequenchyTableTextBox.Multiline = true;
-            this.ShowFrequenchyTableTextBox.Name = "ShowFrequenchyTableTextBox";
-            this.ShowFrequenchyTableTextBox.ReadOnly = true;
-            this.ShowFrequenchyTableTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.ShowFrequenchyTableTextBox.Size = new System.Drawing.Size(389, 355);
-            this.ShowFrequenchyTableTextBox.TabIndex = 1;
-            this.ShowFrequenchyTableTextBox.WordWrap = false;
-            // 
-            // ChooseFileButton
-            // 
-            this.ChooseFileButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ChooseFileButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ChooseFileButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ChooseFileButton.Location = new System.Drawing.Point(12, 33);
-            this.ChooseFileButton.Name = "ChooseFileButton";
-            this.ChooseFileButton.Size = new System.Drawing.Size(185, 52);
-            this.ChooseFileButton.TabIndex = 2;
-            this.ChooseFileButton.Text = "Select File";
-            this.ChooseFileButton.UseVisualStyleBackColor = false;
-            this.ChooseFileButton.Click += new System.EventHandler(this.ChooseFileButton_Click);
-            // 
-            // ShowPathTextBox
-            // 
-            this.ShowPathTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.ShowPathTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ShowPathTextBox.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.ShowPathTextBox.Location = new System.Drawing.Point(204, 33);
-            this.ShowPathTextBox.Multiline = true;
-            this.ShowPathTextBox.Name = "ShowPathTextBox";
-            this.ShowPathTextBox.ReadOnly = true;
-            this.ShowPathTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.ShowPathTextBox.Size = new System.Drawing.Size(626, 52);
-            this.ShowPathTextBox.TabIndex = 3;
-            this.ShowPathTextBox.WordWrap = false;
-            // 
-            // SelectLangFileLabel
-            // 
-            this.SelectLangFileLabel.AutoSize = true;
-            this.SelectLangFileLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SelectLangFileLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SelectLangFileLabel.Location = new System.Drawing.Point(0, 0);
-            this.SelectLangFileLabel.Name = "SelectLangFileLabel";
-            this.SelectLangFileLabel.Size = new System.Drawing.Size(278, 28);
-            this.SelectLangFileLabel.TabIndex = 4;
-            this.SelectLangFileLabel.Text = "Select language in selected file";
-            // 
-            // isUkFile
-            // 
-            this.isUkFile.AutoSize = true;
-            this.isUkFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.isUkFile.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.isUkFile.ForeColor = System.Drawing.SystemColors.Control;
-            this.isUkFile.Location = new System.Drawing.Point(14, 45);
-            this.isUkFile.Name = "isUkFile";
-            this.isUkFile.Size = new System.Drawing.Size(96, 24);
-            this.isUkFile.TabIndex = 5;
-            this.isUkFile.Text = "Ukrainian";
-            this.isUkFile.UseVisualStyleBackColor = true;
-            this.isUkFile.CheckedChanged += new System.EventHandler(this.UkFileRadioButton_CheckedChanged);
-            // 
-            // LangFilePanel
-            // 
-            this.LangFilePanel.Controls.Add(this.isEnFile);
-            this.LangFilePanel.Controls.Add(this.SelectLangFileLabel);
-            this.LangFilePanel.Controls.Add(this.isUkFile);
-            this.LangFilePanel.Location = new System.Drawing.Point(16, 103);
-            this.LangFilePanel.Name = "LangFilePanel";
-            this.LangFilePanel.Size = new System.Drawing.Size(419, 100);
-            this.LangFilePanel.TabIndex = 6;
-            this.LangFilePanel.Visible = false;
-            // 
-            // isEnFile
-            // 
-            this.isEnFile.AutoSize = true;
-            this.isEnFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.isEnFile.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.isEnFile.ForeColor = System.Drawing.SystemColors.Control;
-            this.isEnFile.Location = new System.Drawing.Point(150, 45);
-            this.isEnFile.Name = "isEnFile";
-            this.isEnFile.Size = new System.Drawing.Size(79, 24);
-            this.isEnFile.TabIndex = 6;
-            this.isEnFile.Text = "English";
-            this.isEnFile.UseVisualStyleBackColor = true;
-            this.isEnFile.CheckedChanged += new System.EventHandler(this.EnFileRadioButton_CheckedChanged);
+            this.SelectFileUaButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SelectFileUaButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SelectFileUaButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SelectFileUaButton.Location = new System.Drawing.Point(15, 12);
+            this.SelectFileUaButton.Name = "SelectFileUaButton";
+            this.SelectFileUaButton.Size = new System.Drawing.Size(387, 50);
+            this.SelectFileUaButton.TabIndex = 2;
+            this.SelectFileUaButton.Text = "SELECT UA.TXT";
+            this.SelectFileUaButton.UseVisualStyleBackColor = false;
             // 
             // SortingPanel
             // 
-            this.SortingPanel.Controls.Add(this.CompareResultLabel);
-            this.SortingPanel.Controls.Add(this.CompareTablesButton);
+            this.SortingPanel.Controls.Add(this.panel1);
             this.SortingPanel.Controls.Add(this.ByStandartPercentRadioButton);
             this.SortingPanel.Controls.Add(this.SortingByPanel);
             this.SortingPanel.Controls.Add(this.ByCalculatetPercentRadioButton);
             this.SortingPanel.Controls.Add(this.SelectSortingLabel);
             this.SortingPanel.Controls.Add(this.ByAlphabetRadioButton);
-            this.SortingPanel.Location = new System.Drawing.Point(6, 73);
+            this.SortingPanel.Location = new System.Drawing.Point(15, 476);
             this.SortingPanel.Name = "SortingPanel";
-            this.SortingPanel.Size = new System.Drawing.Size(426, 205);
+            this.SortingPanel.Size = new System.Drawing.Size(723, 151);
             this.SortingPanel.TabIndex = 7;
-            this.SortingPanel.Visible = false;
             // 
-            // CompareResultLabel
+            // panel1
             // 
-            this.CompareResultLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CompareResultLabel.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CompareResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.CompareResultLabel.Location = new System.Drawing.Point(120, 153);
-            this.CompareResultLabel.Name = "CompareResultLabel";
-            this.CompareResultLabel.Size = new System.Drawing.Size(303, 49);
-            this.CompareResultLabel.TabIndex = 11;
-            this.CompareResultLabel.Text = "0000000";
-            this.CompareResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel1.Controls.Add(this.SortingRuTableRadioButton);
+            this.panel1.Controls.Add(this.SortingUaTableRadioButton);
+            this.panel1.Controls.Add(this.SortingEnTableRadioButton);
+            this.panel1.Location = new System.Drawing.Point(428, 26);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(250, 125);
+            this.panel1.TabIndex = 13;
             // 
-            // CompareTablesButton
+            // SortingRuTableRadioButton
             // 
-            this.CompareTablesButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.CompareTablesButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CompareTablesButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.CompareTablesButton.Location = new System.Drawing.Point(6, 153);
-            this.CompareTablesButton.Name = "CompareTablesButton";
-            this.CompareTablesButton.Size = new System.Drawing.Size(108, 49);
-            this.CompareTablesButton.TabIndex = 10;
-            this.CompareTablesButton.Text = "Compare";
-            this.CompareTablesButton.UseVisualStyleBackColor = false;
-            this.CompareTablesButton.Click += new System.EventHandler(this.CompareTablesButton_Click);
+            this.SortingRuTableRadioButton.AutoSize = true;
+            this.SortingRuTableRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.SortingRuTableRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SortingRuTableRadioButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SortingRuTableRadioButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.SortingRuTableRadioButton.Location = new System.Drawing.Point(21, 50);
+            this.SortingRuTableRadioButton.Name = "SortingRuTableRadioButton";
+            this.SortingRuTableRadioButton.Size = new System.Drawing.Size(146, 24);
+            this.SortingRuTableRadioButton.TabIndex = 12;
+            this.SortingRuTableRadioButton.Text = "Sorting RU Table";
+            this.SortingRuTableRadioButton.UseVisualStyleBackColor = false;
+            // 
+            // SortingUaTableRadioButton
+            // 
+            this.SortingUaTableRadioButton.AutoSize = true;
+            this.SortingUaTableRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.SortingUaTableRadioButton.Checked = true;
+            this.SortingUaTableRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SortingUaTableRadioButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SortingUaTableRadioButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.SortingUaTableRadioButton.Location = new System.Drawing.Point(21, 19);
+            this.SortingUaTableRadioButton.Name = "SortingUaTableRadioButton";
+            this.SortingUaTableRadioButton.Size = new System.Drawing.Size(147, 24);
+            this.SortingUaTableRadioButton.TabIndex = 10;
+            this.SortingUaTableRadioButton.TabStop = true;
+            this.SortingUaTableRadioButton.Text = "Sorting UA Table";
+            this.SortingUaTableRadioButton.UseVisualStyleBackColor = false;
+            // 
+            // SortingEnTableRadioButton
+            // 
+            this.SortingEnTableRadioButton.AutoSize = true;
+            this.SortingEnTableRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.SortingEnTableRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SortingEnTableRadioButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SortingEnTableRadioButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.SortingEnTableRadioButton.Location = new System.Drawing.Point(21, 81);
+            this.SortingEnTableRadioButton.Name = "SortingEnTableRadioButton";
+            this.SortingEnTableRadioButton.Size = new System.Drawing.Size(145, 24);
+            this.SortingEnTableRadioButton.TabIndex = 11;
+            this.SortingEnTableRadioButton.Text = "Sorting EN Table";
+            this.SortingEnTableRadioButton.UseVisualStyleBackColor = false;
             // 
             // ByStandartPercentRadioButton
             // 
@@ -225,9 +173,9 @@
             // 
             this.SortingByPanel.Controls.Add(this.SortInDescendingOrderRadioButton);
             this.SortingByPanel.Controls.Add(this.SortByGrowthRadioButton);
-            this.SortingByPanel.Location = new System.Drawing.Point(267, 33);
+            this.SortingByPanel.Location = new System.Drawing.Point(240, 45);
             this.SortingByPanel.Name = "SortingByPanel";
-            this.SortingByPanel.Size = new System.Drawing.Size(147, 76);
+            this.SortingByPanel.Size = new System.Drawing.Size(147, 103);
             this.SortingByPanel.TabIndex = 8;
             // 
             // SortInDescendingOrderRadioButton
@@ -237,7 +185,7 @@
             this.SortInDescendingOrderRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SortInDescendingOrderRadioButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SortInDescendingOrderRadioButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.SortInDescendingOrderRadioButton.Location = new System.Drawing.Point(11, 43);
+            this.SortInDescendingOrderRadioButton.Location = new System.Drawing.Point(11, 62);
             this.SortInDescendingOrderRadioButton.Name = "SortInDescendingOrderRadioButton";
             this.SortInDescendingOrderRadioButton.Size = new System.Drawing.Size(129, 24);
             this.SortInDescendingOrderRadioButton.TabIndex = 6;
@@ -254,7 +202,7 @@
             this.SortByGrowthRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SortByGrowthRadioButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SortByGrowthRadioButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.SortByGrowthRadioButton.Location = new System.Drawing.Point(11, 13);
+            this.SortByGrowthRadioButton.Location = new System.Drawing.Point(11, 3);
             this.SortByGrowthRadioButton.Name = "SortByGrowthRadioButton";
             this.SortByGrowthRadioButton.Size = new System.Drawing.Size(101, 24);
             this.SortByGrowthRadioButton.TabIndex = 5;
@@ -284,7 +232,7 @@
             this.SelectSortingLabel.AutoSize = true;
             this.SelectSortingLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SelectSortingLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SelectSortingLabel.Location = new System.Drawing.Point(11, 0);
+            this.SelectSortingLabel.Location = new System.Drawing.Point(3, 2);
             this.SelectSortingLabel.Name = "SelectSortingLabel";
             this.SelectSortingLabel.Size = new System.Drawing.Size(271, 28);
             this.SelectSortingLabel.TabIndex = 4;
@@ -311,135 +259,207 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // ReturnToChangeLangButton
-            // 
-            this.ReturnToChangeLangButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ReturnToChangeLangButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ReturnToChangeLangButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ReturnToChangeLangButton.Location = new System.Drawing.Point(12, 296);
-            this.ReturnToChangeLangButton.Name = "ReturnToChangeLangButton";
-            this.ReturnToChangeLangButton.Size = new System.Drawing.Size(417, 59);
-            this.ReturnToChangeLangButton.TabIndex = 8;
-            this.ReturnToChangeLangButton.Text = "Return to select lang";
-            this.ReturnToChangeLangButton.UseVisualStyleBackColor = false;
-            this.ReturnToChangeLangButton.Click += new System.EventHandler(this.ReturnToChangeLangButton_Click);
-            // 
             // openFileDialog2
             // 
             this.openFileDialog2.FileName = "openFileDialog2";
             this.openFileDialog2.Multiselect = true;
             // 
-            // menuStrip1
+            // SelectFileRuButton
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.LanguageToolStripMenuItem,
-            this.importTable,
-            this.SaveTable});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(842, 30);
-            this.menuStrip1.TabIndex = 10;
-            this.menuStrip1.Text = "menuStrip1";
+            this.SelectFileRuButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.SelectFileRuButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SelectFileRuButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SelectFileRuButton.Location = new System.Drawing.Point(422, 12);
+            this.SelectFileRuButton.Name = "SelectFileRuButton";
+            this.SelectFileRuButton.Size = new System.Drawing.Size(390, 50);
+            this.SelectFileRuButton.TabIndex = 11;
+            this.SelectFileRuButton.Text = "SELECT RU.TXT";
+            this.SelectFileRuButton.UseVisualStyleBackColor = false;
             // 
-            // LanguageToolStripMenuItem
+            // SaveTableUaButton
             // 
-            this.LanguageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.InterfaceLangUa,
-            this.InterfaceLangEn});
-            this.LanguageToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LanguageToolStripMenuItem.Name = "LanguageToolStripMenuItem";
-            this.LanguageToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
-            this.LanguageToolStripMenuItem.Text = "Language interface";
+            this.SaveTableUaButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.SaveTableUaButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SaveTableUaButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SaveTableUaButton.Location = new System.Drawing.Point(15, 70);
+            this.SaveTableUaButton.Name = "SaveTableUaButton";
+            this.SaveTableUaButton.Size = new System.Drawing.Size(125, 50);
+            this.SaveTableUaButton.TabIndex = 12;
+            this.SaveTableUaButton.Text = "SAVE";
+            this.SaveTableUaButton.UseVisualStyleBackColor = false;
             // 
-            // InterfaceLangUa
+            // CompareTablesUaButton
             // 
-            this.InterfaceLangUa.Name = "InterfaceLangUa";
-            this.InterfaceLangUa.Size = new System.Drawing.Size(154, 26);
-            this.InterfaceLangUa.Text = "Ukrainian";
-            this.InterfaceLangUa.Click += new System.EventHandler(this.InterfaceLangUa_Click);
+            this.CompareTablesUaButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.CompareTablesUaButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CompareTablesUaButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.CompareTablesUaButton.Location = new System.Drawing.Point(146, 70);
+            this.CompareTablesUaButton.Name = "CompareTablesUaButton";
+            this.CompareTablesUaButton.Size = new System.Drawing.Size(125, 50);
+            this.CompareTablesUaButton.TabIndex = 13;
+            this.CompareTablesUaButton.Text = "COMPARE";
+            this.CompareTablesUaButton.UseVisualStyleBackColor = false;
             // 
-            // InterfaceLangEn
+            // ImportTableUaButton
             // 
-            this.InterfaceLangEn.Checked = true;
-            this.InterfaceLangEn.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.InterfaceLangEn.Name = "InterfaceLangEn";
-            this.InterfaceLangEn.Size = new System.Drawing.Size(154, 26);
-            this.InterfaceLangEn.Text = "English";
-            this.InterfaceLangEn.Click += new System.EventHandler(this.InterfaceLangEn_Click);
+            this.ImportTableUaButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ImportTableUaButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ImportTableUaButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ImportTableUaButton.Location = new System.Drawing.Point(277, 70);
+            this.ImportTableUaButton.Name = "ImportTableUaButton";
+            this.ImportTableUaButton.Size = new System.Drawing.Size(125, 50);
+            this.ImportTableUaButton.TabIndex = 14;
+            this.ImportTableUaButton.Text = "IMPORT";
+            this.ImportTableUaButton.UseVisualStyleBackColor = false;
             // 
-            // importTable
+            // SaveTableRuButton
             // 
-            this.importTable.Name = "importTable";
-            this.importTable.Size = new System.Drawing.Size(107, 24);
-            this.importTable.Text = "Import Table";
-            this.importTable.Click += new System.EventHandler(this.importTable_Click);
+            this.SaveTableRuButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.SaveTableRuButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SaveTableRuButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SaveTableRuButton.Location = new System.Drawing.Point(422, 68);
+            this.SaveTableRuButton.Name = "SaveTableRuButton";
+            this.SaveTableRuButton.Size = new System.Drawing.Size(125, 50);
+            this.SaveTableRuButton.TabIndex = 15;
+            this.SaveTableRuButton.Text = "SAVE";
+            this.SaveTableRuButton.UseVisualStyleBackColor = false;
             // 
-            // SaveTable
+            // ImprotTableRuButoon
             // 
-            this.SaveTable.Name = "SaveTable";
-            this.SaveTable.Size = new System.Drawing.Size(93, 24);
-            this.SaveTable.Text = "Save Table";
-            this.SaveTable.Click += new System.EventHandler(this.SaveTable_Click);
+            this.ImprotTableRuButoon.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ImprotTableRuButoon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ImprotTableRuButoon.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ImprotTableRuButoon.Location = new System.Drawing.Point(687, 68);
+            this.ImprotTableRuButoon.Name = "ImprotTableRuButoon";
+            this.ImprotTableRuButoon.Size = new System.Drawing.Size(125, 50);
+            this.ImprotTableRuButoon.TabIndex = 16;
+            this.ImprotTableRuButoon.Text = "IMPORT";
+            this.ImprotTableRuButoon.UseVisualStyleBackColor = false;
             // 
-            // ControlPanel
+            // CompareTablesRuButton
             // 
-            this.ControlPanel.Controls.Add(this.SortingPanel);
-            this.ControlPanel.Controls.Add(this.ReturnToChangeLangButton);
-            this.ControlPanel.Controls.Add(this.DoItButton);
-            this.ControlPanel.Location = new System.Drawing.Point(0, 103);
-            this.ControlPanel.Name = "ControlPanel";
-            this.ControlPanel.Size = new System.Drawing.Size(435, 360);
-            this.ControlPanel.TabIndex = 8;
-            this.ControlPanel.Visible = false;
+            this.CompareTablesRuButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.CompareTablesRuButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CompareTablesRuButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.CompareTablesRuButton.Location = new System.Drawing.Point(553, 68);
+            this.CompareTablesRuButton.Name = "CompareTablesRuButton";
+            this.CompareTablesRuButton.Size = new System.Drawing.Size(125, 50);
+            this.CompareTablesRuButton.TabIndex = 17;
+            this.CompareTablesRuButton.Text = "COMPARE";
+            this.CompareTablesRuButton.UseVisualStyleBackColor = false;
+            // 
+            // DisplayTableRuTextBox
+            // 
+            this.DisplayTableRuTextBox.Location = new System.Drawing.Point(422, 137);
+            this.DisplayTableRuTextBox.Multiline = true;
+            this.DisplayTableRuTextBox.Name = "DisplayTableRuTextBox";
+            this.DisplayTableRuTextBox.ReadOnly = true;
+            this.DisplayTableRuTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.DisplayTableRuTextBox.Size = new System.Drawing.Size(390, 320);
+            this.DisplayTableRuTextBox.TabIndex = 18;
+            this.DisplayTableRuTextBox.WordWrap = false;
+            // 
+            // DisplayTableEnTextBox
+            // 
+            this.DisplayTableEnTextBox.Location = new System.Drawing.Point(829, 137);
+            this.DisplayTableEnTextBox.Multiline = true;
+            this.DisplayTableEnTextBox.Name = "DisplayTableEnTextBox";
+            this.DisplayTableEnTextBox.ReadOnly = true;
+            this.DisplayTableEnTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.DisplayTableEnTextBox.Size = new System.Drawing.Size(390, 320);
+            this.DisplayTableEnTextBox.TabIndex = 24;
+            this.DisplayTableEnTextBox.WordWrap = false;
+            // 
+            // CompareTablesEnButton
+            // 
+            this.CompareTablesEnButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.CompareTablesEnButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CompareTablesEnButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.CompareTablesEnButton.Location = new System.Drawing.Point(960, 68);
+            this.CompareTablesEnButton.Name = "CompareTablesEnButton";
+            this.CompareTablesEnButton.Size = new System.Drawing.Size(125, 50);
+            this.CompareTablesEnButton.TabIndex = 23;
+            this.CompareTablesEnButton.Text = "COMPARE";
+            this.CompareTablesEnButton.UseVisualStyleBackColor = false;
+            // 
+            // ImportTableEnButton
+            // 
+            this.ImportTableEnButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ImportTableEnButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ImportTableEnButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ImportTableEnButton.Location = new System.Drawing.Point(1094, 68);
+            this.ImportTableEnButton.Name = "ImportTableEnButton";
+            this.ImportTableEnButton.Size = new System.Drawing.Size(125, 50);
+            this.ImportTableEnButton.TabIndex = 22;
+            this.ImportTableEnButton.Text = "IMPORT";
+            this.ImportTableEnButton.UseVisualStyleBackColor = false;
+            // 
+            // SaveTableEnButton
+            // 
+            this.SaveTableEnButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.SaveTableEnButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SaveTableEnButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SaveTableEnButton.Location = new System.Drawing.Point(829, 68);
+            this.SaveTableEnButton.Name = "SaveTableEnButton";
+            this.SaveTableEnButton.Size = new System.Drawing.Size(125, 50);
+            this.SaveTableEnButton.TabIndex = 21;
+            this.SaveTableEnButton.Text = "SAVE";
+            this.SaveTableEnButton.UseVisualStyleBackColor = false;
+            // 
+            // SelectFileEnButton
+            // 
+            this.SelectFileEnButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.SelectFileEnButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SelectFileEnButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SelectFileEnButton.Location = new System.Drawing.Point(829, 12);
+            this.SelectFileEnButton.Name = "SelectFileEnButton";
+            this.SelectFileEnButton.Size = new System.Drawing.Size(390, 50);
+            this.SelectFileEnButton.TabIndex = 20;
+            this.SelectFileEnButton.Text = "SELECT EN.TXT";
+            this.SelectFileEnButton.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(842, 475);
-            this.Controls.Add(this.ShowFrequenchyTableTextBox);
-            this.Controls.Add(this.ShowPathTextBox);
-            this.Controls.Add(this.ControlPanel);
-            this.Controls.Add(this.ChooseFileButton);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.LangFilePanel);
+            this.ClientSize = new System.Drawing.Size(1231, 655);
+            this.Controls.Add(this.DisplayTableEnTextBox);
+            this.Controls.Add(this.DisplayTableRuTextBox);
+            this.Controls.Add(this.CompareTablesEnButton);
+            this.Controls.Add(this.CompareTablesRuButton);
+            this.Controls.Add(this.ImportTableEnButton);
+            this.Controls.Add(this.ImprotTableRuButoon);
+            this.Controls.Add(this.SaveTableEnButton);
+            this.Controls.Add(this.SaveTableRuButton);
+            this.Controls.Add(this.SelectFileEnButton);
+            this.Controls.Add(this.ImportTableUaButton);
+            this.Controls.Add(this.CompareTablesUaButton);
+            this.Controls.Add(this.SaveTableUaButton);
+            this.Controls.Add(this.SelectFileRuButton);
+            this.Controls.Add(this.SortingPanel);
+            this.Controls.Add(this.DisplayTableUaTextBox);
+            this.Controls.Add(this.SelectFileUaButton);
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frequency analysis";
-            this.LangFilePanel.ResumeLayout(false);
-            this.LangFilePanel.PerformLayout();
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.SortingPanel.ResumeLayout(false);
             this.SortingPanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.SortingByPanel.ResumeLayout(false);
             this.SortingByPanel.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ControlPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Button DoItButton;
-        private TextBox ShowFrequenchyTableTextBox;
-        private Button ChooseFileButton;
-        private TextBox ShowPathTextBox;
-        private Label SelectLangFileLabel;
-        private RadioButton isUkFile;
-        private Panel LangFilePanel;
-        private RadioButton isEnFile;
+        private TextBox DisplayTableUaTextBox;
+        private Button SelectFileUaButton;
         private Panel SortingPanel;
         private Panel SortingByPanel;
         private RadioButton SortInDescendingOrderRadioButton;
@@ -448,18 +468,25 @@
         private RadioButton ByCalculatetPercentRadioButton;
         private RadioButton ByAlphabetRadioButton;
         private OpenFileDialog openFileDialog1;
-        private Button ReturnToChangeLangButton;
         private RadioButton ByStandartPercentRadioButton;
         private OpenFileDialog openFileDialog2;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem LanguageToolStripMenuItem;
-        private ToolStripMenuItem InterfaceLangUa;
-        private ToolStripMenuItem InterfaceLangEn;
-        private ToolStripMenuItem importTable;
-        private Label CompareResultLabel;
-        private Button CompareTablesButton;
         private SaveFileDialog saveFileDialog1;
-        private ToolStripMenuItem SaveTable;
-        private Panel ControlPanel;
+        private Button SelectFileRuButton;
+        private Button SaveTableUaButton;
+        private Button CompareTablesUaButton;
+        private Button ImportTableUaButton;
+        private Button SaveTableRuButton;
+        private Button ImprotTableRuButoon;
+        private Button CompareTablesRuButton;
+        private TextBox DisplayTableRuTextBox;
+        private TextBox DisplayTableEnTextBox;
+        private Button CompareTablesEnButton;
+        private Button ImportTableEnButton;
+        private Button SaveTableEnButton;
+        private Button SelectFileEnButton;
+        private RadioButton SortingRuTableRadioButton;
+        private RadioButton SortingEnTableRadioButton;
+        private RadioButton SortingUaTableRadioButton;
+        private Panel panel1;
     }
 }
