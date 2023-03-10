@@ -12,20 +12,20 @@ namespace WinFormsApp1
         private void ByAlphabetRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (this.ModeSorting)
-                this.table = this.table.OrderByDescending(x => x.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                this.tableUa = this.tableUa.OrderByDescending(x => x.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
             else
-                this.table = this.table.OrderBy(x => x.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
-            this.DisplayTableUaTextBox.Text = Frequency.BuildTable(table);
+                this.tableUa = this.tableUa.OrderBy(x => x.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+            this.DisplayTableUaTextBox.Text = Frequency.BuildTable(tableUa);
         }
 
         private void ByCalculatetPercentRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (this.ModeSorting)
-                this.table = this.table.OrderByDescending(x => x.CalcPercent).ToList();
+                this.tableUa = this.tableUa.OrderByDescending(x => x.CalcPercent).ToList();
             else
-                this.table = this.table.OrderBy(x => x.CalcPercent).ToList();
+                this.tableUa = this.tableUa.OrderBy(x => x.CalcPercent).ToList();
 
-            this.DisplayTableUaTextBox.Text = Frequency.BuildTable(table);
+            this.DisplayTableUaTextBox.Text = Frequency.BuildTable(tableUa);
 
         }
 
@@ -33,10 +33,10 @@ namespace WinFormsApp1
         private void ByStandartPercentRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (this.ModeSorting)
-                this.table = this.table.OrderByDescending(x => x.StandartPercent).ToList();
+                this.tableUa = this.tableUa.OrderByDescending(x => x.StandartPercent).ToList();
             else
-                this.table = this.table.OrderBy(x => x.StandartPercent).ToList();
-            this.DisplayTableUaTextBox.Text = Frequency.BuildTable(table);
+                this.tableUa = this.tableUa.OrderBy(x => x.StandartPercent).ToList();
+            this.DisplayTableUaTextBox.Text = Frequency.BuildTable(tableUa);
         }
 
         private void SortByGrowthRadioButton_CheckedChanged(object sender, EventArgs e)

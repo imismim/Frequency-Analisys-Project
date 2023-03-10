@@ -11,7 +11,7 @@ namespace WinFormsApp1
 {
     internal class Frequency
     {
-        public static Dictionary<string, List<(char Symbol, float StandartPercent)>> StandartFrequencyTable = new()
+        public static Dictionary<string, List<(char Symbol, float StandartPercent)>> standartFrequencyTable = new Dictionary<string, List<(char Symbol, float StandartPercent)>>()
         {
             { "UA" , new List<(char Symbol, float StandartPercent)>{
                 ('О', 11.31f),
@@ -119,22 +119,22 @@ namespace WinFormsApp1
             return symbols.Where(sym => Char.IsLetter(sym)).Select(sym => Char.ToUpper(sym)).ToList();
         }
 
-        public static List<(char Symbol, float CalcPercent, float StandartPercent)> FrequencyTable(in string NameFile, in string Lang)
+        public static List<(char Symbol, float CalcPercent, float StandartPercent)> FrequencyTable(in string NameFile,string Lang)
         {
-            List<(char Symbol, float StandartPercent)> StandartFrequencyTable;
 
             var AllSymbols = Frequency.FileRead(NameFile);
             var frequencyTabel = new List<(char, float, float)>();
 
             int CountAllSymbols = AllSymbols.Count;
             int CountSymbol;
-            for (int i = 0; i < StandartFrequencyTable.Count(); i++ )/////////////////////////////////////
+            for (int i = 0; i < Frequency.standartFrequencyTable[Lang].Count(); i++ )/////////////////////////////////////
             {
-                CountSymbol = AllSymbols.Where(sym => sym == StandartFrequencyTable[i].Symbol).Count();
+                CountSymbol = AllSymbols.Where(sym => sym == Frequency.standartFrequencyTable[Lang][i].Symbol).Count();
                 float CalculatePercent = (float)CountSymbol / (float)CountAllSymbols;
-                frequencyTabel.Add((StandartFrequencyTable[i].Symbol, (float)Math.Round(CalculatePercent*100, 3), StandartFrequencyTable[i].StandartPercent));
+                frequencyTabel.Add((Frequency.standartFrequencyTable[Lang][i].Symbol, (float)Math.Round(CalculatePercent*100, 3), Frequency.standartFrequencyTable[Lang][i].StandartPercent));
             }
             return frequencyTabel.OrderBy(x => x.Item1.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+            
         }
 
         public static string BuildTable(in List<(char Symbol, float CalcPercent, float StandartPercent)> TableList)
@@ -155,7 +155,7 @@ namespace WinFormsApp1
             {
                 using (var sw = new StreamWriter(FileNAme))
                 {
-                    //var newTable = this.table.OrderBy(i => i.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                    //var newTable = this.tableUa.OrderBy(i => i.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
                     foreach (var item in table)
                     {
                         sw.WriteLine($"{item.Symbol};{item.CalcPercent};{item.StandartPercent}");

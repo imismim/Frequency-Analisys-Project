@@ -8,13 +8,19 @@ namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
-        private string FileName { get; set; }
-        private List<(char Symbol, float CalcPercent, float StandartPercent)> table { get; set; }
+        private string SelectFileNameUa { get; set; }
+        private string FileNameRu { get; set; }
+        private string FileNameEn { get; set; }
+
+        private List<(char Symbol, float CalcPercent, float StandartPercent)> tableUa { get; set; }
+        private List<(char Symbol, float CalcPercent, float StandartPercent)> tableRu { get; set; }
+        private List<(char Symbol, float CalcPercent, float StandartPercent)> tableEn { get; set; }
+
         private char CheckLang { get; set; }
         private bool ModeSorting { get; set; } = false;
         ToolTip CompareTip = new ToolTip();
-        private string CompareTipString = "This value shows how close the calculated frequency table\n" +
-            "is to the standart frequency table.\n" +
+        private string CompareTipString = "This value shows how close the calculated frequency tableUa\n" +
+            "is to the standart frequency tableUa.\n" +
             " The closer the value is to 1, the more similar they are.";
         Random rand = new Random();
 
@@ -27,8 +33,8 @@ namespace WinFormsApp1
 
         private void DoItButton_Click(object sender, EventArgs e)
         {
-            this.table = Frequency.FrequencyTable(FileName, CheckLang);
-            this.DisplayTableUaTextBox.Text = Frequency.BuildTable(table);
+            this.tableUa = Frequency.FrequencyTable(SelectFileNameUa, CheckLang);
+            this.DisplayTableUaTextBox.Text = Frequency.BuildTable(tableUa);
         }
 
         //private void ChooseFileButton_Click(object sender, EventArgs e)
@@ -36,8 +42,8 @@ namespace WinFormsApp1
         //    var post = this.openFileDialog1.ShowDialog();
         //    if (post == DialogResult.OK) 
         //    {
-        //        this.FileName = this.openFileDialog1.FileName;
-        //        if (this.FileName[^3..]!="txt")
+        //        this.SelectFileNameUa = this.openFileDialog1.SelectFileNameUa;
+        //        if (this.SelectFileNameUa[^3..]!="txt")
         //        {
         //            if (InterfaceLangUa.Checked)
         //            {
@@ -62,18 +68,18 @@ namespace WinFormsApp1
         //        var post = this.openFileDialog1.ShowDialog();
         //        if (post == DialogResult.OK)
         //        {
-        //            table = new List<(char, float, float)>();
-        //            using (var sr = new StreamReader(openFileDialog1.FileName))
+        //            tableUa = new List<(char, float, float)>();
+        //            using (var sr = new StreamReader(openFileDialog1.SelectFileNameUa))
         //            {
         //                string AllText = sr.ReadToEnd();
         //                var SplitLine = AllText.Split("\r\n").Where(i => i.Length>2).ToList();
         //                foreach (var item in SplitLine)
         //                {
         //                    var line = item.Split(';').ToList();
-        //                    table.Add((Char.Parse(line[0]), float.Parse(line[1]), float.Parse(line[2])));
+        //                    tableUa.Add((Char.Parse(line[0]), float.Parse(line[1]), float.Parse(line[2])));
         //                }
         //            }
-        //            this.ShowFrequenchyTableTextBox.Text = Frequency.BuildTable(table);
+        //            this.ShowFrequenchyTableTextBox.Text = Frequency.BuildTable(tableUa);
         //            this.SortingPanel.Visible = true;
         //        }
         //    }
@@ -102,10 +108,10 @@ namespace WinFormsApp1
 
         //        if (post == DialogResult.OK)
         //        {
-        //            using (var sw = new StreamWriter(this.saveFileDialog1.FileName))
+        //            using (var sw = new StreamWriter(this.saveFileDialog1.SelectFileNameUa))
         //            {
-        //                //var newTable = this.table.OrderBy(i => i.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
-        //                foreach (var item in table)
+        //                //var newTable = this.tableUa.OrderBy(i => i.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+        //                foreach (var item in tableUa)
         //                {
         //                    sw.WriteLine($"{item.Symbol};{item.CalcPercent};{item.StandartPercent}");
         //                }
@@ -133,11 +139,11 @@ namespace WinFormsApp1
             float norm_A = 0;
             float norm_B = 0;
 
-            for (int i = 0; i < table.Count(); i++)
+            for (int i = 0; i < tableUa.Count(); i++)
             {
-                AxB += table[i].CalcPercent * table[i].StandartPercent;
-                norm_A += (float)Math.Pow(table[i].CalcPercent, 2);
-                norm_B += (float)Math.Pow(table[i].StandartPercent, 2);
+                AxB += tableUa[i].CalcPercent * tableUa[i].StandartPercent;
+                norm_A += (float)Math.Pow(tableUa[i].CalcPercent, 2);
+                norm_B += (float)Math.Pow(tableUa[i].StandartPercent, 2);
             }
             norm_A = (float)Math.Sqrt(norm_A);
             norm_B = (float)Math.Sqrt(norm_B);

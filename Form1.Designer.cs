@@ -236,7 +236,7 @@
             this.SelectSortingLabel.Name = "SelectSortingLabel";
             this.SelectSortingLabel.Size = new System.Drawing.Size(271, 28);
             this.SelectSortingLabel.TabIndex = 4;
-            this.SelectSortingLabel.Text = "Select sorting frequency table";
+            this.SelectSortingLabel.Text = "Select sorting frequency tableUa";
             // 
             // ByAlphabetRadioButton
             // 
