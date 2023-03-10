@@ -130,24 +130,22 @@ namespace WinFormsApp1
             for (int i = 0; i < Frequency.standartFrequencyTable[Lang].Count(); i++ )/////////////////////////////////////
             {
                 CountSymbol = AllSymbols.Where(sym => sym == Frequency.standartFrequencyTable[Lang][i].Symbol).Count();
-                CalculatePercent = CountSymbol / CountAllSymbols;
-                Dif = (float)Math.Abs(CalculatePercent-Frequency.standartFrequencyTable[Lang][i].StandartPercent);
-                frequencyTabel.Add((Frequency.standartFrequencyTable[Lang][i].Symbol, (float)Math.Round(CalculatePercent*100, 3), Frequency.standartFrequencyTable[Lang][i].StandartPercent, Dif));
+                CalculatePercent = (float)Math.Round((CountSymbol / CountAllSymbols)*100, 3);
+                Dif = (float)Math.Round(Math.Abs(CalculatePercent-Frequency.standartFrequencyTable[Lang][i].StandartPercent),3);
+                frequencyTabel.Add((Frequency.standartFrequencyTable[Lang][i].Symbol, CalculatePercent, Frequency.standartFrequencyTable[Lang][i].StandartPercent, Dif));
             }
             return frequencyTabel.OrderBy(x => x.Item1.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
             
         }
 
-        public static (string, string) BuildTable(in List<(char Symbol, float CalcPercent, float StandartPercent, float Dif)> TableList)
+        public static string BuildTable(in List<(char Symbol, float CalcPercent, float StandartPercent, float Dif)> TableList)
         {
-            string TableString = "Symbol\tCalc %\tStan %" + Environment.NewLine;
-            string DifString = string.Empty;
+            string TableString = "Symbol\tCalc %\tStan %\tDif" + Environment.NewLine;
             foreach (var item in TableList)
             {
-                TableString += $"{item.Symbol}\t{item.CalcPercent}\t{item.StandartPercent}"+ Environment.NewLine;
-                DifString += item.Dif.ToString() + Environment.NewLine;
+                TableString += $"{item.Symbol}\t{item.CalcPercent}\t{item.StandartPercent}\t{item.Dif}"+ Environment.NewLine;
             }
-            return (TableString, DifString);
+            return TableString;
         }
 
         public static void SaveTable(in List<(char Symbol, float CalcPercent, float StandartPercent)> table, in string FileNAme)

@@ -47,23 +47,17 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SelectFileRuButton = new System.Windows.Forms.Button();
             this.SaveTableUaButton = new System.Windows.Forms.Button();
-            this.CompareTablesUaButton = new System.Windows.Forms.Button();
             this.ImportTableUaButton = new System.Windows.Forms.Button();
             this.SaveTableRuButton = new System.Windows.Forms.Button();
             this.ImprotTableRuButoon = new System.Windows.Forms.Button();
-            this.CompareTablesRuButton = new System.Windows.Forms.Button();
             this.DisplayTableRuTextBox = new System.Windows.Forms.TextBox();
             this.DisplayTableEnTextBox = new System.Windows.Forms.TextBox();
-            this.CompareTablesEnButton = new System.Windows.Forms.Button();
             this.ImportTableEnButton = new System.Windows.Forms.Button();
             this.SaveTableEnButton = new System.Windows.Forms.Button();
             this.SelectFileEnButton = new System.Windows.Forms.Button();
             this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             this.saveFileDialog3 = new System.Windows.Forms.SaveFileDialog();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SortingPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SortingByPanel.SuspendLayout();
@@ -76,7 +70,7 @@
             this.DisplayTableUaTextBox.Name = "DisplayTableUaTextBox";
             this.DisplayTableUaTextBox.ReadOnly = true;
             this.DisplayTableUaTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.DisplayTableUaTextBox.Size = new System.Drawing.Size(256, 320);
+            this.DisplayTableUaTextBox.Size = new System.Drawing.Size(281, 320);
             this.DisplayTableUaTextBox.TabIndex = 1;
             this.DisplayTableUaTextBox.WordWrap = false;
             // 
@@ -87,7 +81,7 @@
             this.SelectFileUaButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.SelectFileUaButton.Location = new System.Drawing.Point(15, 12);
             this.SelectFileUaButton.Name = "SelectFileUaButton";
-            this.SelectFileUaButton.Size = new System.Drawing.Size(387, 50);
+            this.SelectFileUaButton.Size = new System.Drawing.Size(281, 50);
             this.SelectFileUaButton.TabIndex = 2;
             this.SelectFileUaButton.Text = "SELECT UA.TXT";
             this.SelectFileUaButton.UseVisualStyleBackColor = false;
@@ -103,7 +97,7 @@
             this.SortingPanel.Controls.Add(this.ByAlphabetRadioButton);
             this.SortingPanel.Location = new System.Drawing.Point(15, 476);
             this.SortingPanel.Name = "SortingPanel";
-            this.SortingPanel.Size = new System.Drawing.Size(723, 151);
+            this.SortingPanel.Size = new System.Drawing.Size(882, 151);
             this.SortingPanel.TabIndex = 7;
             // 
             // panel1
@@ -276,9 +270,9 @@
             this.SelectFileRuButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.SelectFileRuButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SelectFileRuButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.SelectFileRuButton.Location = new System.Drawing.Point(422, 12);
+            this.SelectFileRuButton.Location = new System.Drawing.Point(311, 12);
             this.SelectFileRuButton.Name = "SelectFileRuButton";
-            this.SelectFileRuButton.Size = new System.Drawing.Size(390, 50);
+            this.SelectFileRuButton.Size = new System.Drawing.Size(284, 50);
             this.SelectFileRuButton.TabIndex = 11;
             this.SelectFileRuButton.Text = "SELECT RU.TXT";
             this.SelectFileRuButton.UseVisualStyleBackColor = false;
@@ -288,35 +282,22 @@
             this.SaveTableUaButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.SaveTableUaButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SaveTableUaButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.SaveTableUaButton.Location = new System.Drawing.Point(15, 70);
+            this.SaveTableUaButton.Location = new System.Drawing.Point(15, 68);
             this.SaveTableUaButton.Name = "SaveTableUaButton";
-            this.SaveTableUaButton.Size = new System.Drawing.Size(125, 50);
+            this.SaveTableUaButton.Size = new System.Drawing.Size(139, 50);
             this.SaveTableUaButton.TabIndex = 12;
             this.SaveTableUaButton.Text = "SAVE";
             this.SaveTableUaButton.UseVisualStyleBackColor = false;
             this.SaveTableUaButton.Click += new System.EventHandler(this.SaveTableUaButton_Click);
-            // 
-            // CompareTablesUaButton
-            // 
-            this.CompareTablesUaButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.CompareTablesUaButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CompareTablesUaButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.CompareTablesUaButton.Location = new System.Drawing.Point(277, 70);
-            this.CompareTablesUaButton.Name = "CompareTablesUaButton";
-            this.CompareTablesUaButton.Size = new System.Drawing.Size(125, 50);
-            this.CompareTablesUaButton.TabIndex = 13;
-            this.CompareTablesUaButton.Text = "COMPARE";
-            this.CompareTablesUaButton.UseVisualStyleBackColor = false;
-            this.CompareTablesUaButton.Click += new System.EventHandler(this.CompareTablesUaButton_Click);
             // 
             // ImportTableUaButton
             // 
             this.ImportTableUaButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ImportTableUaButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ImportTableUaButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ImportTableUaButton.Location = new System.Drawing.Point(146, 70);
+            this.ImportTableUaButton.Location = new System.Drawing.Point(157, 68);
             this.ImportTableUaButton.Name = "ImportTableUaButton";
-            this.ImportTableUaButton.Size = new System.Drawing.Size(125, 50);
+            this.ImportTableUaButton.Size = new System.Drawing.Size(139, 50);
             this.ImportTableUaButton.TabIndex = 14;
             this.ImportTableUaButton.Text = "IMPORT";
             this.ImportTableUaButton.UseVisualStyleBackColor = false;
@@ -327,9 +308,9 @@
             this.SaveTableRuButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.SaveTableRuButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SaveTableRuButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.SaveTableRuButton.Location = new System.Drawing.Point(422, 68);
+            this.SaveTableRuButton.Location = new System.Drawing.Point(311, 68);
             this.SaveTableRuButton.Name = "SaveTableRuButton";
-            this.SaveTableRuButton.Size = new System.Drawing.Size(125, 50);
+            this.SaveTableRuButton.Size = new System.Drawing.Size(139, 50);
             this.SaveTableRuButton.TabIndex = 15;
             this.SaveTableRuButton.Text = "SAVE";
             this.SaveTableRuButton.UseVisualStyleBackColor = false;
@@ -339,67 +320,43 @@
             this.ImprotTableRuButoon.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ImprotTableRuButoon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ImprotTableRuButoon.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ImprotTableRuButoon.Location = new System.Drawing.Point(553, 68);
+            this.ImprotTableRuButoon.Location = new System.Drawing.Point(456, 68);
             this.ImprotTableRuButoon.Name = "ImprotTableRuButoon";
-            this.ImprotTableRuButoon.Size = new System.Drawing.Size(125, 50);
+            this.ImprotTableRuButoon.Size = new System.Drawing.Size(139, 50);
             this.ImprotTableRuButoon.TabIndex = 16;
             this.ImprotTableRuButoon.Text = "IMPORT";
             this.ImprotTableRuButoon.UseVisualStyleBackColor = false;
             // 
-            // CompareTablesRuButton
-            // 
-            this.CompareTablesRuButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.CompareTablesRuButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CompareTablesRuButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.CompareTablesRuButton.Location = new System.Drawing.Point(684, 70);
-            this.CompareTablesRuButton.Name = "CompareTablesRuButton";
-            this.CompareTablesRuButton.Size = new System.Drawing.Size(125, 50);
-            this.CompareTablesRuButton.TabIndex = 17;
-            this.CompareTablesRuButton.Text = "COMPARE";
-            this.CompareTablesRuButton.UseVisualStyleBackColor = false;
-            // 
             // DisplayTableRuTextBox
             // 
-            this.DisplayTableRuTextBox.Location = new System.Drawing.Point(422, 137);
+            this.DisplayTableRuTextBox.Location = new System.Drawing.Point(311, 137);
             this.DisplayTableRuTextBox.Multiline = true;
             this.DisplayTableRuTextBox.Name = "DisplayTableRuTextBox";
             this.DisplayTableRuTextBox.ReadOnly = true;
             this.DisplayTableRuTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.DisplayTableRuTextBox.Size = new System.Drawing.Size(256, 320);
+            this.DisplayTableRuTextBox.Size = new System.Drawing.Size(284, 320);
             this.DisplayTableRuTextBox.TabIndex = 18;
             this.DisplayTableRuTextBox.WordWrap = false;
             // 
             // DisplayTableEnTextBox
             // 
-            this.DisplayTableEnTextBox.Location = new System.Drawing.Point(829, 137);
+            this.DisplayTableEnTextBox.Location = new System.Drawing.Point(613, 137);
             this.DisplayTableEnTextBox.Multiline = true;
             this.DisplayTableEnTextBox.Name = "DisplayTableEnTextBox";
             this.DisplayTableEnTextBox.ReadOnly = true;
             this.DisplayTableEnTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.DisplayTableEnTextBox.Size = new System.Drawing.Size(256, 320);
+            this.DisplayTableEnTextBox.Size = new System.Drawing.Size(284, 320);
             this.DisplayTableEnTextBox.TabIndex = 24;
             this.DisplayTableEnTextBox.WordWrap = false;
-            // 
-            // CompareTablesEnButton
-            // 
-            this.CompareTablesEnButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.CompareTablesEnButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CompareTablesEnButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.CompareTablesEnButton.Location = new System.Drawing.Point(1094, 70);
-            this.CompareTablesEnButton.Name = "CompareTablesEnButton";
-            this.CompareTablesEnButton.Size = new System.Drawing.Size(125, 50);
-            this.CompareTablesEnButton.TabIndex = 23;
-            this.CompareTablesEnButton.Text = "COMPARE";
-            this.CompareTablesEnButton.UseVisualStyleBackColor = false;
             // 
             // ImportTableEnButton
             // 
             this.ImportTableEnButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ImportTableEnButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ImportTableEnButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ImportTableEnButton.Location = new System.Drawing.Point(960, 70);
+            this.ImportTableEnButton.Location = new System.Drawing.Point(758, 70);
             this.ImportTableEnButton.Name = "ImportTableEnButton";
-            this.ImportTableEnButton.Size = new System.Drawing.Size(125, 50);
+            this.ImportTableEnButton.Size = new System.Drawing.Size(139, 50);
             this.ImportTableEnButton.TabIndex = 22;
             this.ImportTableEnButton.Text = "IMPORT";
             this.ImportTableEnButton.UseVisualStyleBackColor = false;
@@ -409,9 +366,9 @@
             this.SaveTableEnButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.SaveTableEnButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SaveTableEnButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.SaveTableEnButton.Location = new System.Drawing.Point(829, 70);
+            this.SaveTableEnButton.Location = new System.Drawing.Point(613, 70);
             this.SaveTableEnButton.Name = "SaveTableEnButton";
-            this.SaveTableEnButton.Size = new System.Drawing.Size(125, 50);
+            this.SaveTableEnButton.Size = new System.Drawing.Size(139, 50);
             this.SaveTableEnButton.TabIndex = 21;
             this.SaveTableEnButton.Text = "SAVE";
             this.SaveTableEnButton.UseVisualStyleBackColor = false;
@@ -421,9 +378,9 @@
             this.SelectFileEnButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.SelectFileEnButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SelectFileEnButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.SelectFileEnButton.Location = new System.Drawing.Point(829, 12);
+            this.SelectFileEnButton.Location = new System.Drawing.Point(613, 12);
             this.SelectFileEnButton.Name = "SelectFileEnButton";
-            this.SelectFileEnButton.Size = new System.Drawing.Size(390, 50);
+            this.SelectFileEnButton.Size = new System.Drawing.Size(284, 50);
             this.SelectFileEnButton.TabIndex = 20;
             this.SelectFileEnButton.Text = "SELECT EN.TXT";
             this.SelectFileEnButton.UseVisualStyleBackColor = false;
@@ -433,60 +390,21 @@
             this.openFileDialog3.FileName = "openFileDialog2";
             this.openFileDialog3.Multiselect = true;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(277, 137);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(125, 320);
-            this.textBox1.TabIndex = 25;
-            this.textBox1.WordWrap = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(687, 137);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox2.Size = new System.Drawing.Size(125, 320);
-            this.textBox2.TabIndex = 26;
-            this.textBox2.WordWrap = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(1094, 137);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox3.Size = new System.Drawing.Size(125, 320);
-            this.textBox3.TabIndex = 27;
-            this.textBox3.WordWrap = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1231, 655);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(917, 655);
             this.Controls.Add(this.DisplayTableEnTextBox);
             this.Controls.Add(this.DisplayTableRuTextBox);
-            this.Controls.Add(this.CompareTablesEnButton);
-            this.Controls.Add(this.CompareTablesRuButton);
             this.Controls.Add(this.ImportTableEnButton);
             this.Controls.Add(this.ImprotTableRuButoon);
             this.Controls.Add(this.SaveTableEnButton);
             this.Controls.Add(this.SaveTableRuButton);
             this.Controls.Add(this.SelectFileEnButton);
             this.Controls.Add(this.ImportTableUaButton);
-            this.Controls.Add(this.CompareTablesUaButton);
             this.Controls.Add(this.SaveTableUaButton);
             this.Controls.Add(this.SelectFileRuButton);
             this.Controls.Add(this.SortingPanel);
@@ -524,14 +442,11 @@
         private SaveFileDialog saveFileDialog1;
         private Button SelectFileRuButton;
         private Button SaveTableUaButton;
-        private Button CompareTablesUaButton;
         private Button ImportTableUaButton;
         private Button SaveTableRuButton;
         private Button ImprotTableRuButoon;
-        private Button CompareTablesRuButton;
         private TextBox DisplayTableRuTextBox;
         private TextBox DisplayTableEnTextBox;
-        private Button CompareTablesEnButton;
         private Button ImportTableEnButton;
         private Button SaveTableEnButton;
         private Button SelectFileEnButton;
@@ -542,8 +457,5 @@
         private OpenFileDialog openFileDialog3;
         private SaveFileDialog saveFileDialog2;
         private SaveFileDialog saveFileDialog3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
     }
 }

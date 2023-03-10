@@ -59,15 +59,20 @@ namespace WinFormsApp1
                 var post = this.openFileDialog1.ShowDialog();
                 if (post == DialogResult.OK)
                 {
-                    this.tableUa = new List<(char, float, float)>();
+                    this.tableUa = new List<(char, float, float, float)>();
+                    List<string> line;
+                    float CalcPer, StandartPer, Dif;
                     using (var sr = new StreamReader(openFileDialog1.FileName))
                     {
                         string AllText = sr.ReadToEnd();
                         var SplitLine = AllText.Split("\r\n").Where(i => i.Length>2).ToList();
                         foreach (var item in SplitLine)
                         {
-                            var line = item.Split(';').ToList();
-                            tableUa.Add((Char.Parse(line[0]), float.Parse(line[1]), float.Parse(line[2])));
+                            line = item.Split(';').ToList();
+                            CalcPer = float.Parse(line[1]);
+                            StandartPer = float.Parse(line[2]);
+                            Dif =(float)Math.Round(Math.Abs(CalcPer-StandartPer), 3);
+                            tableUa.Add((Char.Parse(line[0]), CalcPer, StandartPer,Dif));
                         }
                     }
                     this.DisplayTableUaTextBox.Text = Frequency.BuildTable(this.tableUa);
@@ -80,9 +85,5 @@ namespace WinFormsApp1
             }
         }
 
-        private void CompareTablesUaButton_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
