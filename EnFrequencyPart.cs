@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Frequency
+namespace WinFormsApp1
 {
-    internal class EnFrequencyPart
+    partial class Form1
     {
     }
 }

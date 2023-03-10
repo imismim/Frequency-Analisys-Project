@@ -9,14 +9,14 @@ namespace WinFormsApp1
     public partial class Form1 : Form
     {
         private string SelectFileNameUa { get; set; }
-        private string FileNameRu { get; set; }
-        private string FileNameEn { get; set; }
+        private string SelectFileNameRu { get; set; }
+        private string SelectFileNameEn { get; set; }
 
-        private List<(char Symbol, float CalcPercent, float StandartPercent)> tableUa { get; set; }
-        private List<(char Symbol, float CalcPercent, float StandartPercent)> tableRu { get; set; }
-        private List<(char Symbol, float CalcPercent, float StandartPercent)> tableEn { get; set; }
+        private List<(char Symbol, float CalcPercent, float StandartPercent, float Dif)> tableUa { get; set; }
+        private List<(char Symbol, float CalcPercent, float StandartPercent, float Dif)> tableRu { get; set; }
+        private List<(char Symbol, float CalcPercent, float StandartPercent, float Dif)> tableEn { get; set; }
 
-        private char CheckLang { get; set; }
+        private string CheckLang { get; set; }
         private bool ModeSorting { get; set; } = false;
         ToolTip CompareTip = new ToolTip();
         private string CompareTipString = "This value shows how close the calculated frequency tableUa\n" +
@@ -31,11 +31,11 @@ namespace WinFormsApp1
             
         }
 
-        private void DoItButton_Click(object sender, EventArgs e)
-        {
-            this.tableUa = Frequency.FrequencyTable(SelectFileNameUa, CheckLang);
-            this.DisplayTableUaTextBox.Text = Frequency.BuildTable(tableUa);
-        }
+        //private void DoItButton_Click(object sender, EventArgs e)
+        //{
+        //    this.tableUa = Frequency.FrequencyTableList(SelectFileNameUa, CheckLang);
+        //    this.DisplayTableUaTextBox.Text = Frequency.BuildTable(tableUa);
+        //}
 
         //private void ChooseFileButton_Click(object sender, EventArgs e)
         //{
@@ -155,5 +155,6 @@ namespace WinFormsApp1
         {
 
         }
+
     }
 }

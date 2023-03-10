@@ -119,34 +119,35 @@ namespace WinFormsApp1
             return symbols.Where(sym => Char.IsLetter(sym)).Select(sym => Char.ToUpper(sym)).ToList();
         }
 
-        public static List<(char Symbol, float CalcPercent, float StandartPercent)> FrequencyTable(in string NameFile,string Lang)
+        public static List<(char Symbol, float CalcPercent, float StandartPercent, float Dif)> FrequencyTableList(in string NameFile,string Lang)
         {
 
             var AllSymbols = Frequency.FileRead(NameFile);
-            var frequencyTabel = new List<(char, float, float)>();
+            var frequencyTabel = new List<(char, float, float, float)>();
 
-            int CountAllSymbols = AllSymbols.Count;
-            int CountSymbol;
+            float CountAllSymbols = AllSymbols.Count;
+            float CountSymbol, CalculatePercent, Dif;
             for (int i = 0; i < Frequency.standartFrequencyTable[Lang].Count(); i++ )/////////////////////////////////////
             {
                 CountSymbol = AllSymbols.Where(sym => sym == Frequency.standartFrequencyTable[Lang][i].Symbol).Count();
-                float CalculatePercent = (float)CountSymbol / (float)CountAllSymbols;
-                frequencyTabel.Add((Frequency.standartFrequencyTable[Lang][i].Symbol, (float)Math.Round(CalculatePercent*100, 3), Frequency.standartFrequencyTable[Lang][i].StandartPercent));
+                CalculatePercent = CountSymbol / CountAllSymbols;
+                Dif = (float)Math.Abs(CalculatePercent-Frequency.standartFrequencyTable[Lang][i].StandartPercent);
+                frequencyTabel.Add((Frequency.standartFrequencyTable[Lang][i].Symbol, (float)Math.Round(CalculatePercent*100, 3), Frequency.standartFrequencyTable[Lang][i].StandartPercent, Dif));
             }
             return frequencyTabel.OrderBy(x => x.Item1.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
             
         }
 
-        public static string BuildTable(in List<(char Symbol, float CalcPercent, float StandartPercent)> TableList)
+        public static (string, string) BuildTable(in List<(char Symbol, float CalcPercent, float StandartPercent, float Dif)> TableList)
         {
-            string TableString = "";
-            TableString += "Symbol\tCalculate %\tStandart %" + Environment.NewLine;
-
+            string TableString = "Symbol\tCalc %\tStan %" + Environment.NewLine;
+            string DifString = string.Empty;
             foreach (var item in TableList)
             {
-                TableString += $"{item.Symbol}\t{item.CalcPercent}\t\t{item.StandartPercent}"+ Environment.NewLine;
+                TableString += $"{item.Symbol}\t{item.CalcPercent}\t{item.StandartPercent}"+ Environment.NewLine;
+                DifString += item.Dif.ToString() + Environment.NewLine;
             }
-            return TableString;
+            return (TableString, DifString);
         }
 
         public static void SaveTable(in List<(char Symbol, float CalcPercent, float StandartPercent)> table, in string FileNAme)
