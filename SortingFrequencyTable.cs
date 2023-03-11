@@ -11,32 +11,88 @@ namespace WinFormsApp1
     {
         private void ByAlphabetRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            if (this.ModeSorting)
-                this.tableUa = this.tableUa.OrderByDescending(x => x.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
-            else
-                this.tableUa = this.tableUa.OrderBy(x => x.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
-            this.DisplayTableUaTextBox.Text = Frequency.BuildTable(tableUa);
+            if (this.SortingUaTableRadioButton.Checked)
+            {
+                if (this.ModeSorting)
+                    this.tableUa = this.tableUa.OrderByDescending(x => x.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                else
+                    this.tableUa = this.tableUa.OrderBy(x => x.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                this.DisplayTableUaTextBox.Text = Frequency.BuildTable(tableUa);
+            }
+            else if (this.SortingRuTableRadioButton.Checked)
+            {
+                if (this.ModeSorting)
+                    this.tableRu = this.tableRu.OrderByDescending(x => x.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                else
+                    this.tableRu = this.tableRu.OrderBy(x => x.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                this.DisplayTableRuTextBox.Text = Frequency.BuildTable(tableRu);
+            }
+            else if (this.SortingEnTableRadioButton.Checked)
+            {
+                if (this.ModeSorting)
+                    this.tableEn = this.tableEn.OrderByDescending(x => x.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                else
+                    this.tableEn = this.tableEn.OrderBy(x => x.Symbol.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                this.DisplayTableEnTextBox.Text = Frequency.BuildTable(tableEn);
+            }
+
         }
 
         private void ByCalculatetPercentRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            if (this.ModeSorting)
-                this.tableUa = this.tableUa.OrderByDescending(x => x.CalcPercent).ToList();
-            else
-                this.tableUa = this.tableUa.OrderBy(x => x.CalcPercent).ToList();
-
-            this.DisplayTableUaTextBox.Text = Frequency.BuildTable(tableUa);
-
+            if (this.SortingUaTableRadioButton.Checked)
+            {
+                if (this.ModeSorting)
+                    this.tableUa = this.tableUa.OrderByDescending(x => x.CalcPercent.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                else
+                    this.tableUa = this.tableUa.OrderBy(x => x.CalcPercent.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                this.DisplayTableUaTextBox.Text = Frequency.BuildTable(tableUa);
+            }
+            else if (this.SortingRuTableRadioButton.Checked)
+            {
+                if (this.ModeSorting)
+                    this.tableRu = this.tableRu.OrderByDescending(x => x.CalcPercent.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                else
+                    this.tableRu = this.tableRu.OrderBy(x => x.CalcPercent.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                this.DisplayTableRuTextBox.Text = Frequency.BuildTable(tableRu);
+            }
+            else if (this.SortingEnTableRadioButton.Checked)
+            {
+                if (this.ModeSorting)
+                    this.tableEn = this.tableEn.OrderByDescending(x => x.CalcPercent.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                else
+                    this.tableEn = this.tableEn.OrderBy(x => x.CalcPercent.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                this.DisplayTableEnTextBox.Text = Frequency.BuildTable(tableEn);
+            }
         }
 
 
         private void ByStandartPercentRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            if (this.ModeSorting)
-                this.tableUa = this.tableUa.OrderByDescending(x => x.StandartPercent).ToList();
-            else
-                this.tableUa = this.tableUa.OrderBy(x => x.StandartPercent).ToList();
-            this.DisplayTableUaTextBox.Text = Frequency.BuildTable(tableUa);
+            if (this.SortingUaTableRadioButton.Checked)
+            {
+                if (this.ModeSorting)
+                    this.tableUa = this.tableUa.OrderByDescending(x => x.StandartPercent.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                else
+                    this.tableUa = this.tableUa.OrderBy(x => x.StandartPercent.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                this.DisplayTableUaTextBox.Text = Frequency.BuildTable(tableUa);
+            }
+            else if (this.SortingRuTableRadioButton.Checked)
+            {
+                if (this.ModeSorting)
+                    this.tableRu = this.tableRu.OrderByDescending(x => x.StandartPercent.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                else
+                    this.tableRu = this.tableRu.OrderBy(x => x.StandartPercent.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                this.DisplayTableRuTextBox.Text = Frequency.BuildTable(tableRu);
+            }
+            else if (this.SortingEnTableRadioButton.Checked)
+            {
+                if (this.ModeSorting)
+                    this.tableEn = this.tableEn.OrderByDescending(x => x.StandartPercent.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                else
+                    this.tableEn = this.tableEn.OrderBy(x => x.StandartPercent.ToString(), StringComparer.Create(new CultureInfo("uk-UA"), true)).ToList();
+                this.DisplayTableEnTextBox.Text = Frequency.BuildTable(tableEn);
+            }
         }
 
         private void SortByGrowthRadioButton_CheckedChanged(object sender, EventArgs e)
