@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Profile 1": {
+      "commandName": "Executable"
+    },
+    "Profile 2": {
+      "commandName": "Project",
+      "commandLineArgs": "D:\\education\\Криптологія\\lab_2_Frequency_Analisys_Table\\WinFormsApp1",
+      "workingDirectory": "D:\\education\\Криптологія\\lab_2_Frequency_Analisys_Table\\WinFormsApp1"
+    }
+  }
+}

@@ -70,12 +70,11 @@
             this.FDTsaveLogFileButton = new System.Windows.Forms.Button();
             this.FDTdoChangeButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.FDTletterChange1ComboBox = new System.Windows.Forms.ComboBox();
-            this.FDTletterChange2ComboBox = new System.Windows.Forms.ComboBox();
+            this.FDTletterReplace1ComboBox = new System.Windows.Forms.ComboBox();
+            this.FDTletterReplace2ComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.FDTokButton = new System.Windows.Forms.Button();
             this.FDTselectTextButton = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.FDTruRadioButton = new System.Windows.Forms.RadioButton();
@@ -520,8 +519,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -546,7 +545,6 @@
             this.tabPage2.Controls.Add(this.panel7);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.FDTokButton);
             this.tabPage2.Controls.Add(this.FDTselectTextButton);
             this.tabPage2.Controls.Add(this.panel6);
             this.tabPage2.Controls.Add(this.FDTdecodedTextBox);
@@ -557,7 +555,6 @@
             this.tabPage2.Size = new System.Drawing.Size(917, 679);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Frequency decoder text";
-
             // 
             // panel7
             // 
@@ -565,8 +562,8 @@
             this.panel7.Controls.Add(this.FDTsaveLogFileButton);
             this.panel7.Controls.Add(this.FDTdoChangeButton);
             this.panel7.Controls.Add(this.label4);
-            this.panel7.Controls.Add(this.FDTletterChange1ComboBox);
-            this.panel7.Controls.Add(this.FDTletterChange2ComboBox);
+            this.panel7.Controls.Add(this.FDTletterReplace1ComboBox);
+            this.panel7.Controls.Add(this.FDTletterReplace2ComboBox);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Location = new System.Drawing.Point(3, 548);
             this.panel7.Name = "panel7";
@@ -625,21 +622,22 @@
             this.label4.TabIndex = 22;
             this.label4.Text = "to the letter";
             // 
-            // FDTletterChange1ComboBox
+            // FDTletterReplace1ComboBox
             // 
-            this.FDTletterChange1ComboBox.FormattingEnabled = true;
-            this.FDTletterChange1ComboBox.Location = new System.Drawing.Point(162, 14);
-            this.FDTletterChange1ComboBox.Name = "FDTletterChange1ComboBox";
-            this.FDTletterChange1ComboBox.Size = new System.Drawing.Size(84, 28);
-            this.FDTletterChange1ComboBox.TabIndex = 17;
+            this.FDTletterReplace1ComboBox.FormattingEnabled = true;
+            this.FDTletterReplace1ComboBox.ImeMode = System.Windows.Forms.ImeMode.Close;
+            this.FDTletterReplace1ComboBox.Location = new System.Drawing.Point(162, 14);
+            this.FDTletterReplace1ComboBox.Name = "FDTletterReplace1ComboBox";
+            this.FDTletterReplace1ComboBox.Size = new System.Drawing.Size(84, 28);
+            this.FDTletterReplace1ComboBox.TabIndex = 17;
             // 
-            // FDTletterChange2ComboBox
+            // FDTletterReplace2ComboBox
             // 
-            this.FDTletterChange2ComboBox.FormattingEnabled = true;
-            this.FDTletterChange2ComboBox.Location = new System.Drawing.Point(371, 14);
-            this.FDTletterChange2ComboBox.Name = "FDTletterChange2ComboBox";
-            this.FDTletterChange2ComboBox.Size = new System.Drawing.Size(81, 28);
-            this.FDTletterChange2ComboBox.TabIndex = 21;
+            this.FDTletterReplace2ComboBox.FormattingEnabled = true;
+            this.FDTletterReplace2ComboBox.Location = new System.Drawing.Point(371, 14);
+            this.FDTletterReplace2ComboBox.Name = "FDTletterReplace2ComboBox";
+            this.FDTletterReplace2ComboBox.Size = new System.Drawing.Size(81, 28);
+            this.FDTletterReplace2ComboBox.TabIndex = 21;
             // 
             // label3
             // 
@@ -673,20 +671,6 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "ENCODED TEXT";
             // 
-            // FDTokButton
-            // 
-            this.FDTokButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.FDTokButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.FDTokButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FDTokButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.FDTokButton.Location = new System.Drawing.Point(234, 9);
-            this.FDTokButton.Name = "FDTokButton";
-            this.FDTokButton.Size = new System.Drawing.Size(229, 50);
-            this.FDTokButton.TabIndex = 16;
-            this.FDTokButton.Text = "OK";
-            this.FDTokButton.UseVisualStyleBackColor = false;
-            this.FDTokButton.Click += new System.EventHandler(this.FDTokButton_Click);
-            // 
             // FDTselectTextButton
             // 
             this.FDTselectTextButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -695,7 +679,7 @@
             this.FDTselectTextButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FDTselectTextButton.Location = new System.Drawing.Point(3, 9);
             this.FDTselectTextButton.Name = "FDTselectTextButton";
-            this.FDTselectTextButton.Size = new System.Drawing.Size(229, 50);
+            this.FDTselectTextButton.Size = new System.Drawing.Size(460, 50);
             this.FDTselectTextButton.TabIndex = 15;
             this.FDTselectTextButton.Text = "SELECT ENCODED TEXT";
             this.FDTselectTextButton.UseVisualStyleBackColor = false;
@@ -710,6 +694,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(455, 53);
             this.panel6.TabIndex = 14;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // FDTruRadioButton
             // 
@@ -724,12 +709,12 @@
             this.FDTruRadioButton.TabIndex = 12;
             this.FDTruRadioButton.Text = "Text RU";
             this.FDTruRadioButton.UseVisualStyleBackColor = false;
+            this.FDTruRadioButton.CheckedChanged += new System.EventHandler(this.FDTruRadioButton_CheckedChanged);
             // 
             // FDTuaRadioButton
             // 
             this.FDTuaRadioButton.AutoSize = true;
             this.FDTuaRadioButton.BackColor = System.Drawing.Color.Transparent;
-            this.FDTuaRadioButton.Checked = true;
             this.FDTuaRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FDTuaRadioButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.FDTuaRadioButton.ForeColor = System.Drawing.SystemColors.InfoText;
@@ -737,14 +722,15 @@
             this.FDTuaRadioButton.Name = "FDTuaRadioButton";
             this.FDTuaRadioButton.Size = new System.Drawing.Size(85, 24);
             this.FDTuaRadioButton.TabIndex = 10;
-            this.FDTuaRadioButton.TabStop = true;
             this.FDTuaRadioButton.Text = "Text UA";
             this.FDTuaRadioButton.UseVisualStyleBackColor = false;
+            this.FDTuaRadioButton.CheckedChanged += new System.EventHandler(this.FDTuaRadioButton_CheckedChanged);
             // 
             // FDTenRadioButton
             // 
             this.FDTenRadioButton.AutoSize = true;
             this.FDTenRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.FDTenRadioButton.Checked = true;
             this.FDTenRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FDTenRadioButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.FDTenRadioButton.ForeColor = System.Drawing.SystemColors.InfoText;
@@ -752,8 +738,10 @@
             this.FDTenRadioButton.Name = "FDTenRadioButton";
             this.FDTenRadioButton.Size = new System.Drawing.Size(83, 24);
             this.FDTenRadioButton.TabIndex = 11;
+            this.FDTenRadioButton.TabStop = true;
             this.FDTenRadioButton.Text = "Text EN";
             this.FDTenRadioButton.UseVisualStyleBackColor = false;
+            this.FDTenRadioButton.CheckedChanged += new System.EventHandler(this.FDTenRadioButton_CheckedChanged);
             // 
             // FDTdecodedTextBox
             // 
@@ -862,11 +850,10 @@
         private RadioButton FDTenRadioButton;
         private TextBox FDTdecodedTextBox;
         private TextBox FDTencodedTextBox;
-        private Button FDTokButton;
-        private ComboBox FDTletterChange1ComboBox;
+        private ComboBox FDTletterReplace1ComboBox;
         private Panel panel7;
         private Label label4;
-        private ComboBox FDTletterChange2ComboBox;
+        private ComboBox FDTletterReplace2ComboBox;
         private Label label3;
         private Label label2;
         private Label label1;
