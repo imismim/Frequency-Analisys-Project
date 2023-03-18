@@ -12,9 +12,9 @@ namespace WinFormsApp1
         private string SelectFileNameRu { get; set; }
         private string SelectFileNameEn { get; set; }
 
-        private List<(char Symbol, float CalcPercent, float StandartPercent, float Dif)> tableUa { get; set; } = null;
-        private List<(char Symbol, float CalcPercent, float StandartPercent, float Dif)> tableRu { get; set; } = null;
-        private List<(char Symbol, float CalcPercent, float StandartPercent, float Dif)> tableEn { get; set; } = null;
+        private List<(char Symbol, float CalcPercent, float StandartPercent, float Dif)> tableUa { get; set; }
+        private List<(char Symbol, float CalcPercent, float StandartPercent, float Dif)> tableRu { get; set; } 
+        private List<(char Symbol, float CalcPercent, float StandartPercent, float Dif)> tableEn { get; set; }
 
         private bool ModeSorting { get; set; } = false;
 
