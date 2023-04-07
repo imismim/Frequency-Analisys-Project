@@ -22,9 +22,13 @@ namespace WinFormsApp1
                     MessageBox.Show("You selected the wrong file format!\nChoose txt format!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning,
                             MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly, false);
                 }
+                else
+                {
+                    this.tableRu = Frequency.FrequencyTableList(this.openFileDialog2.FileName, langRu);
+                    this.DisplayTableRuTextBox.Text =  Frequency.BuildTable(this.tableRu);
+                }
 
-                this.tableRu = Frequency.FrequencyTableList(this.openFileDialog2.FileName, langRu);
-                this.DisplayTableRuTextBox.Text =  Frequency.BuildTable(this.tableRu);
+ 
             }
         }
 

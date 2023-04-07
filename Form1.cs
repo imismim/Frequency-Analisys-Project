@@ -23,11 +23,5 @@ namespace WinFormsApp1
             InitializeComponent();
         }
 
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
     }
 }

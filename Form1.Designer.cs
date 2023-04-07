@@ -63,9 +63,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.ImportTableButton = new System.Windows.Forms.Button();
             this.FDTsaveDecodedTextButton = new System.Windows.Forms.Button();
             this.FDTsaveLogFileButton = new System.Windows.Forms.Button();
             this.FDTdoChangeButton = new System.Windows.Forms.Button();
@@ -82,6 +82,7 @@
             this.FDTenRadioButton = new System.Windows.Forms.RadioButton();
             this.FDTdecodedTextBox = new System.Windows.Forms.TextBox();
             this.FDTencodedTextBox = new System.Windows.Forms.TextBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.FDTopenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.FDTsaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.SortingPanel.SuspendLayout();
@@ -92,10 +93,10 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DisplayTableUaTextBox
@@ -528,17 +529,6 @@
             this.tabControl1.Size = new System.Drawing.Size(925, 712);
             this.tabControl1.TabIndex = 28;
             // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(917, 679);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Frequency table";
-            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.DimGray;
@@ -558,6 +548,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.ImportTableButton);
             this.panel7.Controls.Add(this.FDTsaveDecodedTextButton);
             this.panel7.Controls.Add(this.FDTsaveLogFileButton);
             this.panel7.Controls.Add(this.FDTdoChangeButton);
@@ -569,6 +560,16 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(921, 107);
             this.panel7.TabIndex = 23;
+            // 
+            // ImportTableButton
+            // 
+            this.ImportTableButton.Location = new System.Drawing.Point(5, 75);
+            this.ImportTableButton.Name = "ImportTableButton";
+            this.ImportTableButton.Size = new System.Drawing.Size(214, 29);
+            this.ImportTableButton.TabIndex = 27;
+            this.ImportTableButton.Text = "Import table";
+            this.ImportTableButton.UseVisualStyleBackColor = true;
+            this.ImportTableButton.Click += new System.EventHandler(this.ImportTableButton_Click);
             // 
             // FDTsaveDecodedTextButton
             // 
@@ -694,7 +695,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(455, 53);
             this.panel6.TabIndex = 14;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // FDTruRadioButton
             // 
@@ -765,6 +765,17 @@
             this.FDTencodedTextBox.TabIndex = 2;
             this.FDTencodedTextBox.WordWrap = false;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(917, 679);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Frequency table";
+            // 
             // FDTopenFileDialog
             // 
             this.FDTopenFileDialog.FileName = "FDTopenFileDialog";
@@ -795,12 +806,12 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -862,5 +873,6 @@
         private Button FDTsaveDecodedTextButton;
         private OpenFileDialog FDTopenFileDialog;
         private SaveFileDialog FDTsaveFileDialog;
+        private Button ImportTableButton;
     }
 }

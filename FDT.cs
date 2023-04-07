@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization.Json;
@@ -15,8 +16,7 @@ namespace WinFormsApp1
         public static string ReadFile(string path)
         {
             string text = string.Empty;
-
-            using (StreamReader sr = new StreamReader(path, Encoding.UTF8))
+            using (StreamReader sr = new StreamReader(path, Encoding.ASCII))
             {
                 text = sr.ReadToEnd();
             }
@@ -55,6 +55,36 @@ namespace WinFormsApp1
             }
 
 
+            return decodedText;
+        }
+
+        public static string DecodedTextFrequencyTable(List<char> table, in string text, string path, string lang)
+        {
+            var decodedText = string.Empty;
+
+            var letters = new List<(char letter1, char letter2)>();
+
+            var frequencyTable = Frequency.FrequencyTableList(path, lang).OrderByDescending(i => i.CalcPercent).Select(i => i.Symbol).ToList();
+
+            for (int i = 0; i < Frequency.standartFrequencyTable[lang].Count(); i++)
+            {
+                letters.Add((frequencyTable[i], table[i]));
+            }
+
+            var letter1 = letters.Select(i => char.ToLower(i.letter1)).ToList();
+            var letter2 = letters.Select(i => char.ToLower(i.letter2)).ToList();
+
+            foreach (var item in text.Select(i => char.ToLower(i)))
+            {
+                if (letter1.Contains(item))
+                {
+                    decodedText += letter2[letter1.IndexOf(item)];
+                }
+                else
+                {
+                    decodedText += item;
+                }
+            }
             return decodedText;
         }
 

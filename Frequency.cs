@@ -144,7 +144,7 @@ namespace WinFormsApp1
             foreach (var item in TableList)
             {
                 TableString += $"{item.Symbol}\t{item.CalcPercent}\t{item.StandartPercent}\t{item.Dif}"+ Environment.NewLine;
-                
+       
             }
             return TableString;
         }

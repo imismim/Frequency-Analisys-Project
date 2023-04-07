@@ -20,9 +20,11 @@ namespace WinFormsApp1
                     MessageBox.Show("You selected the wrong file format!\nChoose txt format!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning,
                             MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly, false);
                 }
-
-                this.tableUa = Frequency.FrequencyTableList(this.openFileDialog1.FileName, langUa);
-                this.DisplayTableUaTextBox.Text =  Frequency.BuildTable(this.tableUa);
+                else
+                {
+                    this.tableUa = Frequency.FrequencyTableList(this.openFileDialog1.FileName, langUa);
+                    this.DisplayTableUaTextBox.Text =  Frequency.BuildTable(this.tableUa);
+                }
             }
         }
 
